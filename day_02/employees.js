@@ -45,9 +45,8 @@ console.log("The total salary is: ", total_salary)
 
 //Calculate the average salary
 let avg_salary = 0
-for (employee of employees){
-    avg_salary = (total_salary / employees.length)
-}
+avg_salary = (total_salary / employees.length)
+
 console.log("The average salary: ", avg_salary)
 
 //using reduce()
