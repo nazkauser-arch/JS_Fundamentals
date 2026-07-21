@@ -107,3 +107,16 @@ function highPaid(employees) {
 }
 
 console.log("Highest paid:", highPaid(employees))
+
+//Find an employee by ID.
+function findEmp(targetedId, employees){
+    for (let employee of employees){
+        if (employee.id === targetedId){
+            return employee
+        } 
+    }
+    let notFound = "Employee not found!"
+    return notFound
+}
+
+console.log(findEmp(3, employees))
