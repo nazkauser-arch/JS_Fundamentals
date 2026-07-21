@@ -94,3 +94,16 @@ function sortEmp(employees) {
 }
 
 console.log(sortEmp(employees))
+
+//Find the highest-paid employee
+function highPaid(employees) {
+    let highest_paid = employees[0]
+    for (let employee of employees) {
+        if (employee.salary > highest_paid.salary) {
+            highest_paid = employee
+        }
+    }
+    return highest_paid
+}
+
+console.log("Highest paid:", highPaid(employees))
