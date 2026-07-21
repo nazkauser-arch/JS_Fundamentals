@@ -120,3 +120,15 @@ function findEmp(targetedId, employees){
 }
 
 console.log(findEmp(3, employees))
+
+//Create a function that adds an employee without mutating the original array
+function addEmp(newEmployee, employees){
+    const newEmployees = [...employees]
+    newEmployees.push(newEmployee)
+    return newEmployees
+}
+
+console.log(addEmp({id: 6,
+    name: "Hassan",
+    department: "Engineering",
+    salary: 95000}, employees))
