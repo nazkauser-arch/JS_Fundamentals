@@ -57,3 +57,17 @@ avg_salary = employees.reduce((avg_salary, employee) => {
 console.log("The average salary is: ", avg_salary)
 
 //Group employees by department
+function groupEmp(){
+    const dept = {}
+    for (let employee of employees){
+        if(!(employee.department in dept)){
+            dept[employee.department] = []
+            dept[employee.department].push(employee.name)
+
+        } else{
+            dept[employee.department].push(employee.name)
+        }
+    }
+    return dept
+}
+console.log(groupEmp(employees))
