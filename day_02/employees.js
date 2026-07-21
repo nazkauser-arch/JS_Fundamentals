@@ -7,10 +7,14 @@ const employees = [
 ];
 
 //Return the names of all employees
-const arrName = []
+let arrName = []
 for (let i of employees){
     arrName.push(i.name)
 }
+console.log("Employee Names are: ", arrName)
+
+//using map()
+arrName = employees.map(employee => employee.name)
 console.log("Employee Names are: ", arrName)
 
 //Return employees earning more than 80,000
