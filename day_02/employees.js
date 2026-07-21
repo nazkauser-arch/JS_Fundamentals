@@ -85,3 +85,12 @@ function countEmp(){
     return dept
 }
 console.log(countEmp(employees))
+
+//Sort employees by salary without changing the original array
+function sortEmp(employees) {
+    const sortedEmployees = [...employees]
+    sortedEmployees.sort((a, b) => a.salary - b.salary)
+    return sortedEmployees
+}
+
+console.log(sortEmp(employees))
