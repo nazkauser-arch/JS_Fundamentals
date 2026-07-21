@@ -71,3 +71,17 @@ function groupEmp(){
     return dept
 }
 console.log(groupEmp(employees))
+
+//Count employees in each department
+function countEmp(){
+    const dept = {}
+    for (let employee of employees){
+        if (!(employee.department in dept)){
+                dept[employee.department] = 1
+        } else{
+            dept[employee.department]++
+        }
+    }
+    return dept
+}
+console.log(countEmp(employees))
