@@ -18,6 +18,42 @@ arrName = employees.map(employee => employee.name)
 console.log("Employee Names are: ", arrName)
 
 //Return employees earning more than 80,000
-for (let j of employees){
-
+let arrSalary = []
+for (let employee of employees){
+    if(employee.salary > 80000){
+        arrSalary.push(employee.name)
+    }
 }
+console.log("The employees with salary more than 80,000 are :", arrSalary)
+
+//using filter()
+arrSalary = employees.filter((employee)=>employee.salary > 80000).map(employee => employee.name)
+console.log("The employees with salary more than 80,000 are :", arrSalary)
+
+//Calculate the total salary
+let total_salary = 0
+for (employee of employees){
+    total_salary += employee.salary
+}
+console.log("Total Salary: ", total_salary)
+
+//using reduce()
+total_salary = employees.reduce((total_salary, employee) => {
+    return total_salary += employee.salary
+}, 0)
+console.log("The total salary is: ", total_salary)
+
+//Calculate the average salary
+let avg_salary = 0
+for (employee of employees){
+    avg_salary = (total_salary / employees.length)
+}
+console.log("The average salary: ", avg_salary)
+
+//using reduce()
+avg_salary = employees.reduce((avg_salary, employee) => {
+    return avg_salary = total_salary / employees.length
+}, 0)
+console.log("The average salary is: ", avg_salary)
+
+//Group employees by department
