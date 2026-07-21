@@ -8,8 +8,8 @@ const employees = [
 
 //Return the names of all employees
 let arrName = []
-for (let i of employees){
-    arrName.push(i.name)
+for (let employee of employees){
+    arrName.push(employee.name)
 }
 console.log("Employee Names are: ", arrName)
 
