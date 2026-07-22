@@ -56,10 +56,10 @@ let numbers = [
   2,
   75
 ]
-console.log(myFilter(numbers , function(number, i, numbers) {
+console.log(myFilter(numbers , function(number, i, numbers){
     let count = 0
-    for (let i of numbers) {
-        if (i === number) {
+    for (let i of numbers){
+        if (i === number){
             count++
         }
     }
