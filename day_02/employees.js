@@ -41,6 +41,7 @@ console.log("Total Salary: ", total_salary)
 total_salary = employees.reduce((total_salary, employee) => {
     return total_salary += employee.salary
 }, 0)
+
 console.log("The total salary is: ", total_salary)
 
 //Calculate the average salary
@@ -62,7 +63,6 @@ function groupEmp(){
         if(!(employee.department in dept)){
             dept[employee.department] = []
             dept[employee.department].push(employee.name)
-
         } else{
             dept[employee.department].push(employee.name)
         }
@@ -76,7 +76,7 @@ function countEmp(){
     const dept = {}
     for (let employee of employees){
         if (!(employee.department in dept)){
-                dept[employee.department] = 1
+          dept[employee.department] = 1
         } else{
             dept[employee.department]++
         }
