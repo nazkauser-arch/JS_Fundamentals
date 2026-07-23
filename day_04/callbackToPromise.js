@@ -12,7 +12,7 @@ getUser((user) => {
     console.log(user)
 })
 
-//using Promise()
+// //using Promise()
 const mypromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         let user = []
