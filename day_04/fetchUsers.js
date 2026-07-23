@@ -1,3 +1,5 @@
+console.log("Start")
+
 fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => {
         return response.json()
@@ -5,3 +7,5 @@ fetch("https://jsonplaceholder.typicode.com/users")
     .then((users) => {
         console.log(users)
     })
+
+console.log("End")    
