@@ -18,7 +18,6 @@ function calcDiscount(total){
     if (total > 10000){
         return total * discount 
     }
-    //return total
 }
 
 //calculating final price
