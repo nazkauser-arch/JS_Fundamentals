@@ -13,7 +13,7 @@ getUser((user) => {
 })
 
 //using Promise()
-const promise = new Promise((resolve, reject) => {
+const mypromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         let user = []
         let result = user.push({
@@ -24,7 +24,7 @@ const promise = new Promise((resolve, reject) => {
     }, 2000)
 })
 
-promise
+mypromise
     .then((result) => {
         console.log(result)
     })
