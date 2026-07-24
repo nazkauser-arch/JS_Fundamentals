@@ -1,4 +1,5 @@
-//Object
+const Stack = require("./stackUsingArray")
+
 const stack = new Stack()
 
 //test empty stack
