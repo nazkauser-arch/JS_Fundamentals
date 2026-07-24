@@ -5,11 +5,9 @@ function binarySearch(target, sortedArr) {
         let mid = Math.floor((left + right) / 2)
         if (sortedArr[mid] === target) {
             return mid
-        } 
-        else if (sortedArr[mid] < target) {
+        } else if (sortedArr[mid] < target) {
             left = mid + 1
-        } 
-        else {
+        } else {
             right = mid - 1
         }
     }  
