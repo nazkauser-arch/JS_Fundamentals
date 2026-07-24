@@ -34,6 +34,8 @@ class Stack {
     }
 }
 
+module.exports = Stack
+
 //Object
 const stack = new Stack()
 
