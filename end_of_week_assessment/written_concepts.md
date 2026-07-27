@@ -2,7 +2,7 @@
 
 ### Primitive type
 - Primitive types are datatypes that are referenced directly, the variable name points to the value itself. Copying a primitive type copies the value.
-- a = 7
+- a = 7\n
 b = a
 b = 5
 now a = 7 and b = 5
