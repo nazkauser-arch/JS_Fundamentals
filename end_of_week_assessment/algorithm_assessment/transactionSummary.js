@@ -13,17 +13,20 @@ function transactionSummary(transactions) {
         } else if (transactions[i].type === "debit") {
             summary[transactions[i].userId].debitedAmount += transactions[i].amount
         }
-        for(transactions[i].userId in summary) {
-            summary[transactions[i].userId].finalBalance = summary[transactions[i].userId].creditedAmount - summary[transactions[i].userId].debitedAmount
+        summary[transactions[i].userId].finalBalance = summary[transactions[i].userId].finalBalance = summary[transactions[i].userId].creditedAmount - summary[transactions[i].userId].debitedAmount
+        if (summary[transactions[i].userId].finalBalance < 0) {
+            summary[transactions[i].userId].finalBalance = 0
         }
     }
     return summary
 
 }
 
-console.log(transactionSummary( [
+const transactions = [
   { userId: 1, amount: 500, type: "credit" },
   { userId: 2, amount: 200, type: "debit" },
   { userId: 1, amount: 100, type: "debit" },
   { userId: 2, amount: 300, type: "credit" }
-]))
+]
+
+console.log(transactionSummary(transactions))
