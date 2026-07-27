@@ -2,7 +2,7 @@
 
 ### Primitive type
 - Primitive types are datatypes that are referenced directly, the variable name points to the value itself. Copying a primitive type copies the value.
-- a = 7\n
+- a = 7
 b = a
 b = 5
 now a = 7 and b = 5
@@ -30,3 +30,11 @@ user2 = {
     name: "Sara"
 }
 - For example: Object, Class
+
+## == vs ===
+
+### == 
+- == is loose equality, == compares only the values and perfrom type coercion if datatypes are different
+- 5 == "5" => true
+- === is strict equalit, === compares the value and the datatype
+- 5 === "5" => false
