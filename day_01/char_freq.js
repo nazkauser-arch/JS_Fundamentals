@@ -3,8 +3,7 @@ function charFreq(text){
     for (let i of text){
         if (!(i in charCount)){
             charCount[i] = 1
-        }
-        else {
+        } else {
             charCount[i]++
         }
     }
