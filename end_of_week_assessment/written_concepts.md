@@ -71,6 +71,8 @@ function sum(a, b){
 
 ### Synchronous
 - Synchronous execution means executing code in a sequence, a line of code starts executing only after the previous code has executed completely
+
+### Asynchronous
 - In asynchronous execution, thw code doesn't wait for the tasks that is taking time, if an API call is waiting for the data, the code after that call keeps executing.
 
 ## 8. O(n)
