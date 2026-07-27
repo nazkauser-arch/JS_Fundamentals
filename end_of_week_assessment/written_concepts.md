@@ -31,7 +31,7 @@ user2 = {
 }
 - For example: Object, Class
 
-## == vs ===
+## 2. == vs ===
 
 ### == 
 - == is loose equality, == compares only the values and perfrom type coercion if datatypes are different
