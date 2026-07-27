@@ -34,7 +34,10 @@ user2 = {
 ## 2. == vs ===
 
 ### == 
-- == is loose equality, == compares only the values and perfrom type coercion if datatypes are different
+- == is loose equality, == compares only the values and perform type coercion if datatypes are different
 - 5 == "5" => true
+
+### ===
 - === is strict equalit, === compares the value and the datatype
 - 5 === "5" => false
+
