@@ -48,6 +48,7 @@ Object, Class
 - Closure allows you to access variable that is in outside (lexical) scope, in the outer function.
 
 ## 4. Pure Function
+
 - A pure function has the same output everytime for a given input.
 ### For example 
 function sum(a, b){
@@ -58,6 +59,8 @@ function sum(a, b){
 
 ### map()
 - map() returns a new array after implementing the given function on each of the element of the existing array.
+
+### filter()
 - filter() checks every element with condition and returns a new array with elements that pass that condition.
 
 ## 6. Event-loop responsibilty
