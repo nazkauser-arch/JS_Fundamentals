@@ -9,7 +9,6 @@ function saveTasks(tasks) {
     } catch (error) {
         console.log("Error saving tasks: ", error.message)
     }
-
 }
 
 module.exports = saveTasks
