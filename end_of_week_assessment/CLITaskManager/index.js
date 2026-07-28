@@ -29,7 +29,7 @@ if (choice === 1) {
 } else if (choice === 5) {
     searchTasks(tasks)
 } else if (choice === 6) {
-    sortTasks()
+    sortTasks(tasks)
 } else if (choice === 7) {
     tasks = updateTask(tasks)
     saveTasks(tasks)
