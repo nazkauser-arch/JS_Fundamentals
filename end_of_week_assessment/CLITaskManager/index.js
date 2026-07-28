@@ -1,7 +1,9 @@
 const menu = require("./menu")
+const loadTasks = require("./utils/loadTasks")
+const saveTasks = require("./utils/saveTasks")
 
 const addTask = require("./services/addTask")
-const deleteask = require("./services/deleteTask")
+const deleteTask = require("./services/deleteTask")
 const filterTasks = require("./services/filterTasks")
 const markTask = require("./services/markTask")
 const searchTasks = require("./services/searchTasks")
@@ -9,9 +11,12 @@ const sortTasks = require("./services/sortTasks")
 const updateTask = require("./services/updateTask")
 const viewTask = require("./services/viewTask")
 
+let tasks = loadTasks()
+
 let choice = menu()
 if (choice === 1) {
-    addTask()
+    tasks = addTask(tasks)
+    saveTasks(tasks)
 } else if (choice === 2) {
     deleteTask()
 } else if (choice === 3) {
