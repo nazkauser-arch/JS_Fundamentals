@@ -38,5 +38,5 @@ if (choice === 1) {
 } else if (choice === 7) {
     updateTask()
 } else if (choice === 8) {
-    viewTask()
+    viewTask(tasks)
 }
