@@ -17,8 +17,16 @@ let choice = menu()
 if (choice === 1) {
     tasks = addTask(tasks)
     saveTasks(tasks)
+    console.log("Task added successfully")
 } else if (choice === 2) {
-    deleteTask()
+    const result = deleteTask(tasks)
+    tasks = result.tasks
+    if (result.taskFound) {
+        saveTasks(tasks)
+        console.log("Task deleted successfully")
+    } else {
+        console.log("Task doesn't exist")
+    }
 } else if (choice === 3) {
     filterTasks()
 } else if (choice === 4) {
