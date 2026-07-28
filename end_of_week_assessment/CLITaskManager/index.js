@@ -13,26 +13,32 @@ const viewTask = require("./services/viewTask")
 
 let tasks = loadTasks()
 
-let choice = menu()
-if (choice === 1) {
-    tasks = addTask(tasks)
-    saveTasks(tasks)
-    console.log("Task added successfully")
-} else if (choice === 2) {
-    tasks = deleteTask(tasks)
-    saveTasks(tasks)
-} else if (choice === 3) {
-    filterTasks(tasks)
-} else if (choice === 4) {
-    tasks = markTask(tasks)
-    saveTasks(tasks)
-} else if (choice === 5) {
-    searchTasks(tasks)
-} else if (choice === 6) {
-    sortTasks(tasks)
-} else if (choice === 7) {
-    tasks = updateTask(tasks)
-    saveTasks(tasks)
-} else if (choice === 8) {
-    viewTask(tasks)
+while (true) {
+    let choice = menu()
+    if (choice === 9) {
+        console.log("Exiting task manager...")
+        break
+    } else if (choice === 1) {
+        tasks = addTask(tasks)
+        saveTasks(tasks)
+    } else if (choice === 2) {
+        tasks = deleteTask(tasks)
+        saveTasks(tasks)
+    } else if (choice === 3) {
+        filterTasks(tasks)
+    } else if (choice === 4) {
+        tasks = markTask(tasks)
+        saveTasks(tasks)
+    } else if (choice === 5) {
+        searchTasks(tasks)
+    } else if (choice === 6) {
+        sortTasks(tasks)
+    } else if (choice === 7) {
+        tasks = updateTask(tasks)
+        saveTasks(tasks)
+    } else if (choice === 8) {
+        viewTask(tasks)
+    } else {
+        console.log("Invalid choice")
+    }
 }
