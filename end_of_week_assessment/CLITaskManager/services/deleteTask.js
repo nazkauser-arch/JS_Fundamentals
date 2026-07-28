@@ -12,7 +12,12 @@ function deleteTask(tasks) {
             break
         }
     }
-    return {tasks, taskFound}
+    if (taskFound) {
+        console.log("Task deleted successfully")
+    } else {
+        console.log("Task doesn't exist")
+    }
+    return tasks
 }
 
 module.exports = deleteTask

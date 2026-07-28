@@ -19,14 +19,8 @@ if (choice === 1) {
     saveTasks(tasks)
     console.log("Task added successfully")
 } else if (choice === 2) {
-    const result = deleteTask(tasks)
-    tasks = result.tasks
-    if (result.taskFound) {
-        saveTasks(tasks)
-        console.log("Task deleted successfully")
-    } else {
-        console.log("Task doesn't exist")
-    }
+    tasks = deleteTask(tasks)
+    saveTasks(tasks)
 } else if (choice === 3) {
     filterTasks()
 } else if (choice === 4) {
@@ -36,7 +30,8 @@ if (choice === 1) {
 } else if (choice === 6) {
     sortTasks()
 } else if (choice === 7) {
-    updateTask()
+    tasks = updateTask(tasks)
+    saveTasks(tasks)
 } else if (choice === 8) {
     viewTask(tasks)
 }
