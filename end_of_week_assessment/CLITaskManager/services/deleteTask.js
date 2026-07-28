@@ -7,7 +7,7 @@ function deleteTask(tasks) {
 
     for (let i of tasks) {
         if (i.id === id) {
-            tasks = tasks.filter(task => task.id !== id)
+            tasks = tasks.filter(i => i.id !== id)
             taskFound = true
             break
         }

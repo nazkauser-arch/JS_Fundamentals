@@ -22,7 +22,7 @@ if (choice === 1) {
     tasks = deleteTask(tasks)
     saveTasks(tasks)
 } else if (choice === 3) {
-    filterTasks()
+    filterTasks(tasks)
 } else if (choice === 4) {
     tasks = markTask(tasks)
     saveTasks(tasks)
