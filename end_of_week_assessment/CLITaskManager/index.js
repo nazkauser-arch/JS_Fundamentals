@@ -24,7 +24,8 @@ if (choice === 1) {
 } else if (choice === 3) {
     filterTasks()
 } else if (choice === 4) {
-    markTask()
+    tasks = markTask(tasks)
+    saveTasks(tasks)
 } else if (choice === 5) {
     searchTasks()
 } else if (choice === 6) {
