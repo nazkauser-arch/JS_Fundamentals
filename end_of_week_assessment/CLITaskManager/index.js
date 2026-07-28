@@ -27,7 +27,7 @@ if (choice === 1) {
     tasks = markTask(tasks)
     saveTasks(tasks)
 } else if (choice === 5) {
-    searchTasks()
+    searchTasks(tasks)
 } else if (choice === 6) {
     sortTasks()
 } else if (choice === 7) {
