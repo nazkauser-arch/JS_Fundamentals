@@ -4,9 +4,12 @@ const capitalize = require("./utils/stringUtils")
 const readFile = require("./utils/readFile")
 const writeFile = require("./utils/writeFile")
 
+console.log("Create and import a utility module")
 const text = process.argv[2]
 
 console.log(`Capitalized text is: ${capitalize(text)}`)
+console.log("-----------------------------------------------------------")
+console.log("Read and write file using node.js")
 
 const data = readFile()
 
