@@ -1,10 +1,7 @@
 ## 1. Get all tasks
 **HTTP method**
----
-get
+- get
 **URL**
----
-/tasks
+- /tasks
 **Expected status code**
----
-200 OK
+- 200 OK
