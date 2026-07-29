@@ -22,32 +22,32 @@ A simple Command Line Interface (CLI) Task Manager built with Node.js. It allows
 - JavaScript (ES6)
 - File System (`fs`) Module
 - prompt-sync
+- `path` module
 
 ## Project Structure
-
 ```
 CLI-Task-Manager/
 │
 ├── index.js
 ├── menu.js
 ├── tasks.json
-│
-├── handlers/
-│   ├── addTask.js
-│   ├── viewTasks.js
-│   ├── updateTask.js
-│   ├── deleteTask.js
-│   ├── markCompleted.js
-│   ├── filterTasks.js
-│   ├── searchTask.js
-│   └── sortTasks.js
-│
-├── utils/
-│   ├── fileHandler.js
-│   └── validators.js
-│
 ├── package.json
-└── README.md
+├── README.md
+│
+├── services/
+│   ├── addTask.js
+│   ├── deleteTask.js
+│   ├── filterTassk.js
+│   ├── markTask.js
+│   ├── searchTasks.js
+│   ├── sortTasks.js
+│   ├── updateTask.js
+│   └── viewTask.js
+│
+└── utils/
+    ├── loadTasks.js
+    ├── saveTasks.js
+    └── validateInput.js
 ```
 
 ## Installation
@@ -61,7 +61,7 @@ git clone <repository-url>
 2. Navigate to the project folder
 
 ```bash
-cd CLI-Task-Manager
+cd CLITaskManager
 ```
 
 3. Install dependencies
@@ -83,9 +83,11 @@ Each task is stored in the following format:
 ```json
 {
   "id": 1,
-  "title": "Complete JavaScript assignment",
-  "priority": "High",
-  "completed": false
+  "title": "JavaScript assignment",
+  "description": "Finish JS assignment",
+  "status": "pending",
+  "priority": "high",
+  "createdAt": "ISO date"
 }
 ```
 
@@ -93,13 +95,13 @@ Each task is stored in the following format:
 
 ```
 1. Add Task
-2. View Tasks
-3. Update Task
-4. Delete Task
-5. Mark Task as Completed
-6. Filter Tasks
-7. Search Task
-8. Sort Tasks
+2. Delete Task
+3. Filter Task
+4. Mark Task
+5. Search Tasks
+6. Sort Tasks
+7. Update Task
+8. View Task
 9. Exit
 ```
 
@@ -114,12 +116,13 @@ Each task is stored in the following format:
 ## Error Handling
 
 - Creates `tasks.json` if it does not exist.
-- Handles invalid or corrupted JSON data.
 - Displays appropriate error messages for invalid user input.
 
 ## Future Improvements
 
 - Add due dates
+- Input Validation in Update tasks
+- SearchTasks includes all the tasks with searched word
 - Add task categories
 - Support multiple sorting options
 - Add colored terminal output
