@@ -37,7 +37,7 @@ CLI-Task-Manager/
 ├── services/
 │   ├── addTask.js
 │   ├── deleteTask.js
-│   ├── filterTassk.js
+│   ├── filterTask.js
 │   ├── markTask.js
 │   ├── searchTasks.js
 │   ├── sortTasks.js
