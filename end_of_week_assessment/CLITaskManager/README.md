@@ -55,12 +55,13 @@ CLI-Task-Manager/
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone <"https://github.com/nazkauser-arch/JS_Fundamentals/tree/main">
 ```
 
 2. Navigate to the project folder
 
 ```bash
+cd end_of_week_assessment
 cd CLITaskManager
 ```
 
