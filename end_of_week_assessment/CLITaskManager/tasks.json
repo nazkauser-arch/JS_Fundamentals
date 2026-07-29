@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "1",
+    "title": "javascript assignment",
+    "description": "finish javascript assignment",
+    "status": "completed",
+    "priority": "high",
+    "createdAt": "2026-07-29T09:58:08.010Z"
+  },
+  {
+    "id": "2",
+    "title": "es6 concepts",
+    "description": "revise, let, const, arrow func",
+    "status": "pending",
+    "priority": "medium",
+    "createdAt": "2026-07-29T10:00:25.739Z"
+  },
+  {
+    "id": "3",
+    "title": "fix merge conflict",
+    "description": "resolve merge conflict and push latest chenges to github",
+    "status": "pending",
+    "priority": "low",
+    "createdAt": "2026-07-29T10:02:15.322Z"
+  },
+  {
+    "id": "4",
+    "title": "README",
+    "description": "write documentation for the CLI task manager",
+    "status": "pending",
+    "priority": "high",
+    "createdAt": "2026-07-29T10:02:52.497Z"
+  }
+]
