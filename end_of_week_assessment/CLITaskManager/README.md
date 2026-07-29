@@ -11,7 +11,7 @@ A simple Command Line Interface (CLI) Task Manager built with Node.js. It allows
 - Mark tasks as completed
 - Filter tasks by status
 - Search tasks by title
-- Sort tasks by priority
+- Sort tasks by priority/ Creation Date
 - Persistent storage using a JSON file
 - Input validation
 - Handles missing or corrupted data files gracefully
