@@ -15,15 +15,6 @@ const tasks = [
         priority: "high",
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
-    },
-    {
-        id: "2",
-        title: "Learn express",
-        description: "Complete the express assignment",
-        status: "pending",
-        priority: "high",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString() 
     }
 ]
 
@@ -40,6 +31,22 @@ app.get("/api/tasks/:id", (req, res) => {
         })
     }
     res.json(task)
+})
+
+app.post("/api/tasks", (req, res) => {
+    const newTask = {
+        id: String(tasks.length + 1),
+        title: req.body.title,
+        description: req.body.description,
+        status: req.body.status,
+        priority: req.body.priority,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    }
+
+    tasks.push(newTask)
+
+    res.status(201).json(newTask)
 })
 
 app.listen(PORT, () => {
