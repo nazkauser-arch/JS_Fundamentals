@@ -1,19 +1,9 @@
 $kind: http-request
 name: http://localhost:3000/api/tasks
 description: ""
-url: http://localhost:3000/api/tasks
-method: POST
+url: http://localhost:3000/api/tasks/1
+method: DELETE
 body:
   type: json
-  content: "{\r
-
-    \    \"title\": \"Learn APIs\",\r
-
-    \    \"description\": \"Complete POST request\",\r
-
-    \    \"status\": \"pending\",\r
-
-    \    \"priority\": \"high\"\r
-
-    }"
+  content: ""
 order: 1785422361543
