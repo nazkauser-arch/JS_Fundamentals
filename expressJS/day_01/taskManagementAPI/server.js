@@ -15,11 +15,31 @@ const tasks = [
         priority: "high",
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
+    },
+    {
+        id: "2",
+        title: "Learn express",
+        description: "Complete the express assignment",
+        status: "pending",
+        priority: "high",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString() 
     }
 ]
 
 app.get("/api/tasks", (req, res) => {
     res.json(tasks)
+})
+
+app.get("/api/tasks/:id", (req, res) => {
+    const task = tasks.find(task => task.id === req.params.id)
+
+    if (!task) {
+        return res.status(404).json({
+            message: "Task not found"
+        })
+    }
+    res.json(task)
 })
 
 app.listen(PORT, () => {
