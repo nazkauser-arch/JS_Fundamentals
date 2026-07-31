@@ -1,0 +1,9 @@
+$kind: http-request
+name: http://localhost:3000/api/tasks
+description: ""
+url: http://localhost:3000/api/tasks/1
+method: DELETE
+body:
+  type: json
+  content: ""
+order: 1785422361543
