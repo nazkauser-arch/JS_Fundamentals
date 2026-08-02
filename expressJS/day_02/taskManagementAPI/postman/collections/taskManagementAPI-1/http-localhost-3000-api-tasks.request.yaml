@@ -1,8 +1,11 @@
 $kind: http-request
 name: http://localhost:3000/api/tasks
 description: ""
-url: http://localhost:3000/api/tasks?status=pending
+url: http://localhost:3000/api/tasks?status=pending&priority=high&page=1&limit=2
 method: GET
 queryParams:
   status: pending
+  priority: high
+  page: "1"
+  limit: "2"
 order: 1785677861312
