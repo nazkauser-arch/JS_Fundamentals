@@ -1,86 +1,92 @@
 const taskService = require("../services/taskService")
 
 // GET all tasks
-exports.getTasks = (req, res) => {
+exports.getTasks = (req, res, next) => {
+    try {
+        const tasks = taskService.getAllTasks()
 
-    const tasks = taskService.getAllTasks()
-
-    res.status(200).json({
-        success: true,
-        data: tasks
-    })
+        res.status(200).json({
+            success: true,
+            data: tasks
+        })
+    } catch (error) {
+        next(error)
+    }
 }
 
 // GET one task
-exports.getTaskById = (req, res) => {
+exports.getTaskById = (req, res, next) => {
+    try {
+        const task = taskService.getTaskById(req.params.id)
 
-    const task = taskService.getTaskById(req.params.id)
+        if (!task) {
+            const error = new Error("Task not found")
+            error.statusCode = 404
+            return next(error)
+        }
 
-    if (!task) {
-        return res.status(404).json({
-            success: false,
-            error: {
-                message: "Task not found"
-            }
+        res.status(200).json({
+            success: true,
+            data: task
         })
+    } catch (error) {
+        next(error)
     }
-
-    res.status(200).json({
-        success: true,
-        data: task
-    })
 }
 
 // POST create task
-exports.createTask = (req, res) => {
+exports.createTask = (req, res, next) => {
+    try {
+        const newTask = taskService.createTask(req.body)
 
-    const newTask = taskService.createTask(req.body)
-
-    res.status(201).json({
-        success: true,
-        data: newTask
-    })
+        res.status(201).json({
+            success: true,
+            data: newTask
+        })
+    } catch (error) {
+        next(error)
+    }
 }
 
 // PATCH update task
-exports.updateTask = (req, res) => {
+exports.updateTask = (req, res, next) => {
+    try {
+        const updatedTask = taskService.updateTask(
+            req.params.id,
+            req.body
+        )
 
-    const updatedTask = taskService.updateTask(
-        req.params.id,
-        req.body
-    )
+        if (!updatedTask) {
+            const error = new Error("Task not found")
+            error.statusCode = 404
+            return next(error)
+        }
 
-    if (!updatedTask) {
-        return res.status(404).json({
-            success: false,
-            error: {
-                message: "Task not found"
-            }
+        res.status(200).json({
+            success: true,
+            data: updatedTask
         })
+    } catch (error) {
+        next(error)
     }
-
-    res.status(200).json({
-        success: true,
-        data: updatedTask
-    })
 }
 
 // DELETE task
-exports.deleteTask = (req, res) => {
+exports.deleteTask = (req, res, next) => {
+    try {
+        const deletedTask = taskService.deleteTask(req.params.id)
 
-    const deletedTask = taskService.deleteTask(req.params.id)
+        if (!deletedTask) {
+            const error = new Error("Task not found")
+            error.statusCode = 404
+            return next(error)
+        }
 
-    if (!deletedTask) {
-        return res.status(404).json({
-            success: false,
-            error: {
-                message: "Task not found"
-            }
+        res.status(200).json({
+            success: true,
+            data: deletedTask
         })
+    } catch (error) {
+        next(error)
     }
-
-    res.status(200).json({
-        success: true,
-        data: deletedTask
-    })
 }
