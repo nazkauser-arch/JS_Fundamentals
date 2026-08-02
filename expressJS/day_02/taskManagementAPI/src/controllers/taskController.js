@@ -3,7 +3,10 @@ const taskService = require("../services/taskService")
 // GET all tasks
 exports.getTasks = (req, res, next) => {
     try {
-        const tasks = taskService.getAllTasks()
+        const page = parseInt(req.query.page) || 1
+        const limit = parseInt(req.query.limit) || 10
+
+        const tasks = taskService.getAllTasks(page, limit)
 
         res.status(200).json({
             success: true,

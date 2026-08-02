@@ -7,12 +7,51 @@ let tasks = [
         priority: "high",
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
+    },
+    {
+        id: "2",
+        title: "Build REST API",
+        description: "Implement CRUD operations",
+        status: "completed",
+        priority: "medium",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    },
+    {
+        id: "3",
+        title: "Write Documentation",
+        description: "Update the project README",
+        status: "pending",
+        priority: "low",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    },
+    {
+        id: "4",
+        title: "Test API",
+        description: "Test all endpoints using Postman",
+        status: "pending",
+        priority: "high",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    },
+    {
+        id: "5",
+        title: "Refactor Code",
+        description: "Separate routes, controllers and services",
+        status: "completed",
+        priority: "medium",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
     }
 ]
 
 // Get all tasks
-exports.getAllTasks = () => {
-    return tasks
+exports.getAllTasks = (page, limit) => {
+    const startIndex = (page - 1) * limit
+    const endIndex = startIndex + limit
+
+    return tasks.slice(startIndex, endIndex)
 }
 
 // Get task by id
