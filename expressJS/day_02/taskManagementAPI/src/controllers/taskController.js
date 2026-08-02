@@ -2,16 +2,36 @@ const taskService = require("../services/taskService")
 
 // GET all tasks
 exports.getTasks = (req, res, next) => {
-    try {
-        const page = parseInt(req.query.page) || 1
-        const limit = parseInt(req.query.limit) || 10
 
-        const tasks = taskService.getAllTasks(page, limit)
+    try {
+
+        const { status, priority, sortBy } = req.query
+
+        let tasks
+
+
+        if (status || priority) {
+            tasks = taskService.filterTasks(
+                status,
+                priority
+            )
+        }
+        else {
+            tasks = taskService.getAllTasks()
+        }
+
+
+        if (sortBy) {
+            tasks = taskService.sortTasks(sortBy)
+        }
+
 
         res.status(200).json({
             success: true,
             data: tasks
         })
+
+
     } catch (error) {
         next(error)
     }

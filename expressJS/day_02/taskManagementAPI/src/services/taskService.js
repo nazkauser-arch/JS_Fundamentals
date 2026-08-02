@@ -106,3 +106,53 @@ exports.deleteTask = (id) => {
 
     return tasks.splice(taskIndex, 1)[0]
 }
+
+// Filter tasks by status and priority
+exports.filterTasks = (status, priority) => {
+
+    let filteredTasks = [...tasks]
+
+    if (status) {
+        filteredTasks = filteredTasks.filter(
+            task => task.status === status
+        )
+    }
+
+    if (priority) {
+        filteredTasks = filteredTasks.filter(
+            task => task.priority === priority
+        )
+    }
+
+    return filteredTasks
+}
+
+// Sort tasks by creation date or priority
+exports.sortTasks = (sortBy) => {
+
+    let sortedTasks = [...tasks]
+
+    if (sortBy === "date") {
+        sortedTasks.sort(
+            (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+        )
+    }
+
+
+    if (sortBy === "priority") {
+
+        const priorityOrder = {
+            high: 1,
+            medium: 2,
+            low: 3
+        }
+
+        sortedTasks.sort(
+            (a, b) =>
+                priorityOrder[a.priority] -
+                priorityOrder[b.priority]
+        )
+    }
+
+    return sortedTasks
+}
