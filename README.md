@@ -41,3 +41,9 @@ The repository includes:
 
 **Kauser Naz**    
 MERN Stack Intern at Devsinc
+
+---
+
+# License
+
+This repository is for educational and internship learning purposes.
