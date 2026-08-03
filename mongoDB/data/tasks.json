@@ -1,0 +1,315 @@
+[{
+  "_id": {
+    "$oid": "6a7087551c547058dab611ab"
+  },
+  "title": "Complete MongoDB assignment",
+  "description": "Practice MongoDB queries and database design",
+  "status": "pending",
+  "priority": "high",
+  "ownerId": {
+    "$oid": "6a707fb01c547058dab611a1"
+  },
+  "dueDate": {
+    "$date": "2026-08-10T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T12:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T12:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7087ab1c547058dab611ad"
+  },
+  "title": "Learn MongoDB queries",
+  "description": "Practice CRUD operations in MongoDB",
+  "status": "completed",
+  "priority": "medium",
+  "ownerId": {
+    "$oid": "6a707fb01c547058dab611a1"
+  },
+  "dueDate": {
+    "$date": "2026-08-12T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T10:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T10:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70896d1c547058dab611af"
+  },
+  "title": "Learn MongoDB aggregation",
+  "description": "Practice aggregation pipeline and MongoDB operators",
+  "status": "pending",
+  "priority": "medium",
+  "ownerId": {
+    "$oid": "6a707fb01c547058dab611a1"
+  },
+  "dueDate": {
+    "$date": "2026-08-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T14:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T14:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70897b1c547058dab611b2"
+  },
+  "title": "Build Task API with MongoDB",
+  "description": "Connect Express API with MongoDB database",
+  "status": "in-progress",
+  "priority": "high",
+  "ownerId": {
+    "$oid": "6a707fb01c547058dab611a1"
+  },
+  "dueDate": {
+    "$date": "2026-08-16T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T15:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T15:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70897b1c547058dab611b3"
+  },
+  "title": "Practice MongoDB CRUD operations",
+  "description": "Perform create, read, update, and delete operations",
+  "status": "completed",
+  "priority": "low",
+  "ownerId": {
+    "$oid": "6a707fb01c547058dab611a1"
+  },
+  "dueDate": {
+    "$date": "2026-08-18T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T16:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T16:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708a4a1c547058dab611b7"
+  },
+  "title": "Learn MongoDB indexing",
+  "description": "Understand indexes and improve query performance",
+  "status": "pending",
+  "priority": "high",
+  "ownerId": {
+    "$oid": "6a70835c1c547058dab611a3"
+  },
+  "dueDate": {
+    "$date": "2026-08-12T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T17:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708a4a1c547058dab611b8"
+  },
+  "title": "Create database collections",
+  "description": "Design users and tasks collections structure",
+  "status": "completed",
+  "priority": "medium",
+  "ownerId": {
+    "$oid": "6a70835c1c547058dab611a3"
+  },
+  "dueDate": {
+    "$date": "2026-08-13T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T17:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T17:10:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708a4a1c547058dab611b9"
+  },
+  "title": "Implement MongoDB queries",
+  "description": "Practice find, update, delete, and filter queries",
+  "status": "in-progress",
+  "priority": "high",
+  "ownerId": {
+    "$oid": "6a70835c1c547058dab611a3"
+  },
+  "dueDate": {
+    "$date": "2026-08-15T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T17:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T17:20:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708a4a1c547058dab611ba"
+  },
+  "title": "Connect MongoDB with Express",
+  "description": "Integrate MongoDB database with Express backend",
+  "status": "pending",
+  "priority": "medium",
+  "ownerId": {
+    "$oid": "6a70835c1c547058dab611a3"
+  },
+  "dueDate": {
+    "$date": "2026-08-17T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T17:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T17:30:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708a4a1c547058dab611bb"
+  },
+  "title": "Test API with Postman",
+  "description": "Verify task endpoints and database responses",
+  "status": "completed",
+  "priority": "low",
+  "ownerId": {
+    "$oid": "6a70835c1c547058dab611a3"
+  },
+  "dueDate": {
+    "$date": "2026-08-20T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T17:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T17:40:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708af21c547058dab611bf"
+  },
+  "title": "Explore MongoDB Compass",
+  "description": "Learn how to create databases, collections, and documents",
+  "status": "completed",
+  "priority": "medium",
+  "ownerId": {
+    "$oid": "6a7083691c547058dab611a5"
+  },
+  "dueDate": {
+    "$date": "2026-08-11T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T18:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708af21c547058dab611c0"
+  },
+  "title": "Create MongoDB data models",
+  "description": "Define schemas for application collections",
+  "status": "in-progress",
+  "priority": "high",
+  "ownerId": {
+    "$oid": "6a7083691c547058dab611a5"
+  },
+  "dueDate": {
+    "$date": "2026-08-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T18:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T18:10:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708af21c547058dab611c1"
+  },
+  "title": "Practice MongoDB aggregation",
+  "description": "Use aggregation stages to analyze task data",
+  "status": "pending",
+  "priority": "high",
+  "ownerId": {
+    "$oid": "6a7083691c547058dab611a5"
+  },
+  "dueDate": {
+    "$date": "2026-08-16T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T18:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T18:20:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708af21c547058dab611c2"
+  },
+  "title": "Implement CRUD functionality",
+  "description": "Create operations to manage tasks in MongoDB",
+  "status": "pending",
+  "priority": "medium",
+  "ownerId": {
+    "$oid": "6a7083691c547058dab611a5"
+  },
+  "dueDate": {
+    "$date": "2026-08-18T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T18:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T18:30:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a708af21c547058dab611c3"
+  },
+  "title": "Review MongoDB relationships",
+  "description": "Understand references between users and tasks collections",
+  "status": "completed",
+  "priority": "low",
+  "ownerId": {
+    "$oid": "6a7083691c547058dab611a5"
+  },
+  "dueDate": {
+    "$date": "2026-08-20T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2026-08-03T18:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-03T18:40:00.000Z"
+  }
+}]
