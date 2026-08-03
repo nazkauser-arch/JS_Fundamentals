@@ -1,9 +1,0 @@
-$kind: http-request
-name: http://localhost:3000/api/tasks
-description: ""
-url: http://localhost:3000/api/tasks?page=1&limit=2
-method: GET
-queryParams:
-  page: "1"
-  limit: "2"
-order: 1785768545452
