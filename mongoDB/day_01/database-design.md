@@ -12,13 +12,13 @@
 - A task is connected to its owner by a field named "ownerId", which contains the userId.
 
 ### 5. Which fields should be required?
-## users
+### users
 - name 
 - email --> identify user for login info
 - role --> for user permissions
 - createdAt 
 
-## tasks
+### tasks
 - title --> a task should have a title 
 - description should be optional
 - status --> to distinguish between tasks
