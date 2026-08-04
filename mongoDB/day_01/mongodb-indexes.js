@@ -1,0 +1,1 @@
+const { connectDB, getDB } = require("./config/db")
