@@ -28,3 +28,49 @@
 - createdAt
 - updatedAt
 
+### 6. Which fields should have default values?
+### users
+- id
+- createdAt
+
+### tasks
+- id
+- status --> the new task inserted should be pending initially
+- createdAt
+- updatedAt
+
+### 7. Which values should be restricted?
+### users
+- role --> user, admin
+
+### tasks
+- status --> pending, in-progess, completed
+- priority --> low, high, medium
+- dueDate  --> The date should be from today onwards
+
+### 8. Which fields should be indexed?
+- email in users
+- status, ownerId, priority in tasks
+
+### 9. What should happen to a user’s tasks if the user is deleted?
+- The tasks should be deleted along with the user.
+
+### 10. How would you prevent duplicate email addresses?
+- Creating a unique index on the email can prevent duplicate emails
+
+### 11. What is the difference between application validation and a database constraint?
+- Application validation --> rules checked in the code
+- DB constraint --> rules enforced by mongodb itself
+
+### 12. What are the main queries this application will perform?
+- Create / Insert
+- Find / Search
+- Update
+- Delete
+- Aggregation
+
+### 13. Why should database design be based on query patterns?
+- Because it helps structure and orgaize the data based on how the application accesses tha data
+
+### 14. When would a relational database be more suitable than MongoDB?
+- Relational DB will be used if the data structure is consistent, predictable and highly structured
