@@ -289,6 +289,10 @@ const runQueries = async () => {
 
     console.log(usersWithMoreTasks)
 
+    // Query with/without index
+    const result = await  tasksCollection.find({ ownerId: new ObjectId("6a70835c1c547058dab611a3") }).explain("executionStats")
+    console.log(result)
+
 
 }
 
