@@ -1,17 +1,26 @@
-const mongoose = require("mongoose")
 const taskService = require("../services/taskService")
-const userService = require("../services/userService")
-
 
 // GET all tasks
-exports.getTasks = async (req, res, next) => {
+exports.getTasks = (req, res, next) => {
+
     try {
-        const tasks = await taskService.getAllTasks(req.query)
+
+        const page = parseInt(req.query.page) || 1
+        const limit = parseInt(req.query.limit) || 10
+
+        const { status, priority, sortBy } = req.query
+
+        const tasks = taskService.getAllTasks(
+            page,
+            limit,
+            status,
+            priority,
+            sortBy
+        )
 
         res.status(200).json({
             success: true,
-            data: tasks.tasks,
-            pagination: tasks.pagination
+            data: tasks
         })
 
     } catch (error) {
@@ -20,10 +29,9 @@ exports.getTasks = async (req, res, next) => {
 }
 
 // GET one task
-exports.getTaskById = async (req, res, next) => {
+exports.getTaskById = (req, res, next) => {
     try {
-
-        const task = await taskService.getTaskById(req.params.id)
+        const task = taskService.getTaskById(req.params.id)
 
         if (!task) {
             const error = new Error("Task not found")
@@ -35,118 +43,63 @@ exports.getTaskById = async (req, res, next) => {
             success: true,
             data: task
         })
-
     } catch (error) {
         next(error)
     }
 }
 
 // POST create task
-exports.createTask = async (req, res, next) => {
+exports.createTask = (req, res, next) => {
     try {
-        const {ownerId} = req.body
-
-        const user = await userService.getUserById(ownerId)
-
-        if (!user) {
-            const error = new Error("Owner not found")
-            error.statusCode = 404
-            return next(error)
-        }
-        
-        const task = await taskService.createTask(req.body)
+        const newTask = taskService.createTask(req.body)
 
         res.status(201).json({
             success: true,
-            data: task
+            data: newTask
         })
-
     } catch (error) {
         next(error)
     }
 }
 
 // PATCH update task
-exports.updateTask = async (req, res, next) => {
+exports.updateTask = (req, res, next) => {
     try {
-        const { id } = req.params
+        const updatedTask = taskService.updateTask(
+            req.params.id,
+            req.body
+        )
 
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({
-                success: false,
-                error: {
-                    message: "Invalid task ID"
-                }
-            })
-        }
-
-        const allowedUpdates = [
-            "title",
-            "description",
-            "status",
-            "priority",
-            "dueDate"
-        ]
-
-        const updates = {}
-
-        for (const key of allowedUpdates) {
-            if (req.body[key] !== undefined) {
-                updates[key] = req.body[key]
-            }
-        }
-
-        const task = await taskService.updateTask(id, updates)
-
-        if (!task) {
-            return res.status(404).json({
-                success: false,
-                error: {
-                    message: "Task not found"
-                }
-            })
+        if (!updatedTask) {
+            const error = new Error("Task not found")
+            error.statusCode = 404
+            return next(error)
         }
 
         res.status(200).json({
             success: true,
-            data: task
+            data: updatedTask
         })
-
     } catch (error) {
         next(error)
     }
 }
 
 // DELETE task
-exports.deleteTask = async (req, res, next) => {
+exports.deleteTask = (req, res, next) => {
     try {
-        const { id } = req.params
+        const deletedTask = taskService.deleteTask(req.params.id)
 
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({
-                success: false,
-                error: {
-                    message: "Invalid task ID"
-                }
-            })
-        }
-
-        const task = await taskService.deleteTask(id)
-
-        if (!task) {
-            return res.status(404).json({
-                success: false,
-                error: {
-                    message: "Task not found"
-                }
-            })
+        if (!deletedTask) {
+            const error = new Error("Task not found")
+            error.statusCode = 404
+            return next(error)
         }
 
         res.status(200).json({
             success: true,
-            data: task
+            data: deletedTask
         })
-
     } catch (error) {
         next(error)
     }
