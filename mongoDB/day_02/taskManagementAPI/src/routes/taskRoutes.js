@@ -8,11 +8,12 @@ const {
 } = require("../controllers/taskController")
 
 const validateTask = require("../middleware/validateTask")
+const errorHandler = require("../middleware/errorhandler")
 
 const router = express.Router()
 
 router.get("/", getTasks)
-router.get("/:id", getTaskById)
+router.get("/:id", errorHandler, getTaskById)
 router.post("/", validateTask, createTask)
 router.patch("/:id", validateTask, updateTask)
 router.delete("/:id", deleteTask)
