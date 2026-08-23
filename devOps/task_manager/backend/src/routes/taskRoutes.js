@@ -9,7 +9,7 @@ const {
 
 const authMiddleware = require("../middleware/authMiddleware")
 const validateTask = require("../middleware/validateTask")
-const errorHandler = require("../middleware/errorhandler")
+const errorHandler = require("../middleware/errorHandler")
 
 const router = express.Router()
 
