@@ -1,4 +1,15 @@
 services:
+  mongodb:
+    image: mongo:7
+    container_name: task-manager-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - task-manager-network
+
   backend:
     build: ./backend
     container_name: task-manager-backend
@@ -9,7 +20,9 @@ services:
       - ./backend/.env
     environment:
       PORT: 3000
-      MONGODB_URI: mongodb://host.docker.internal:27017/task_management
+      MONGODB_URI: mongodb://mongodb:27017/task_management
+    depends_on:
+      - mongodb
     networks:
       - task-manager-network
 
@@ -26,6 +39,9 @@ services:
       - backend
     networks:
       - task-manager-network
+
+volumes:
+  mongodb_data:
 
 networks:
   task-manager-network:
