@@ -38,16 +38,15 @@ function TaskFilter({
         </select>
       </div>
 
-      <button
-        type="button"
-        onClick={() => {
-          setSearch("")
-          onStatusChange("all")
-          onPriorityChange("all")
-        }}
-      >
-        Clear Filters
-      </button>
+<button
+  type="button"
+  onClick={() => {
+    onStatusChange("all")
+    onPriorityChange("all")
+  }}
+>
+  Clear Filters
+</button>
     </div>
   )
 }
