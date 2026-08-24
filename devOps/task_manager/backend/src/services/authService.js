@@ -4,6 +4,13 @@ const bcrypt = require("bcrypt")
 
 exports.registerUser = async (userData) => {
     const { name, email, password, role } = userData
+
+    if (!name || !email || !password) {
+        const error = new Error("Name, email and password are required")
+        error.statusCode = 400
+        throw error
+    }
+
     if (role === "admin") {
         const error = new Error("Cannot register as admin")
         error.statusCode = 403
