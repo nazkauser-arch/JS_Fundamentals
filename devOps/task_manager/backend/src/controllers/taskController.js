@@ -26,7 +26,10 @@ exports.getTasks = async (req, res, next) => {
 exports.getTaskById = async (req, res, next) => {
     try {
 
-        const task = await taskService.getTaskById(req.params.id)
+        const task = await taskService.getTaskById(
+            req.params.id,
+            req.user.id
+        )
 
         if (!task) {
             const error = new Error("Task not found")

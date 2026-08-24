@@ -61,8 +61,11 @@ exports.getAllTasks = async (filters, ownerId) => {
 }
 
 // Get task by id
-exports.getTaskById = async (id) => {
-    return await Task.findById(id)
+exports.getTaskById = async (id, ownerId) => {
+    return await Task.findOne({
+        _id: id,
+        ownerId
+    })
 }
 
 // Create new task
