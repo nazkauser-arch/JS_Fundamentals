@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 
 function TaskCard({ task, onComplete, onDelete }) {
-  console.log("THIS TASK CARD IS BEING USED")
   return (
     <div
       className="task-card"

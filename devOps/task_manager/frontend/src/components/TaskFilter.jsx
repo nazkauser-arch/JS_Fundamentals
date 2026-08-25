@@ -11,9 +11,10 @@ function TaskFilter({
       <h1>Filter Tasks</h1>
 
       <div>
-        <label>By Status</label>
+        <label htmlFor="status-filter">By Status</label>
 
         <select
+          id="status-filter"
           value={status}
           onChange={(e) => onStatusChange(e.target.value)}
         >
@@ -25,9 +26,10 @@ function TaskFilter({
       </div>
 
       <div>
-        <label>By Priority</label>
+        <label htmlFor="priority-filter">By Priority</label>
 
         <select
+          id="priority-filter"
           value={priority}
           onChange={(e) => onPriorityChange(e.target.value)}
         >
