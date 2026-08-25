@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 import { MemoryRouter } from "react-router-dom"
 import { describe, test, expect, vi, beforeEach } from "vitest"
 
-import TasksPage from "../pages/TasksPage"
+import TasksPage from "../pages/tasksPage"
 import {
   getTasks,
   updateTask
