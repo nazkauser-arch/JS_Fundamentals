@@ -21,6 +21,16 @@ function LoginPage() {
     e.preventDefault()
     setError("")
 
+    if (!email) {
+      setError("Email is required")
+        return
+      }
+
+    if (!password) {
+      setError("Password is required")
+        return
+      }
+
     try {
       await login(email, password)
 
